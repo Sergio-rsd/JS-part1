@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Change</title>
+</head>
+<body>
+    <script>
+        "use strict";
+        let admin='Горыныч';
+        let name='Василий';
+        alert ("admin: " + admin + "\n" + "name: "+name);
+// через массив
+// через длину строковой переменной
+        admin = name + admin;
+        name = admin.substring(name.length,admin.length);
+        admin = admin.substring(0,(admin.length - name.length));
+// через регулярные выражения
+        admin += name;
+        name = admin.replace(name, "");
+        admin = admin.replace(name, "");
+        alert ("admin: " + admin + "\n" + "name: "+name);
+    </script>
+</body>
+</html>
