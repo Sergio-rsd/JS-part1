@@ -10,16 +10,18 @@
         let admin='Горыныч';
         let name='Василий';
         alert ("admin: " + admin + "\n" + "name: "+name);
-// через массив
 // через длину строковой переменной
         admin = name + admin;
         name = admin.substring(name.length,admin.length);
         admin = admin.substring(0,(admin.length - name.length));
+        alert ("1 Вариант:" + "\n" + "admin: " + admin + "\n" + "name: "+name);
 // через регулярные выражения
+        admin='Горыныч';
+        name='Василий';
         admin += name;
         name = admin.replace(name, "");
         admin = admin.replace(name, "");
-        alert ("admin: " + admin + "\n" + "name: "+name);
+        alert ("2 Вариант:" + "\n" + "admin: " + admin + "\n" + "name: "+name);
     </script>
 </body>
 </html>
