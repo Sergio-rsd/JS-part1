@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task4</title>
+</head>
+<body>
+    <script>
+        let num = parseInt(prompt("Число введите от 0 до 999: ",));
+        let numObject = {}; // обьект обьявили
+        
+        function numAnswer(number) {
+            if (isNaN(number)) {
+                alert("Совсем не число");
+                return numObject = {};
+            }
+            if ((number >= 0) && (number <= 999)) {
+                numObject.hundreds = Math.floor(number / 100);
+                numObject.dozens = Math.floor((number % 100)/10);
+                numObject.units  = number % 10;
+                return numObject;
+                }
+            else {
+                alert("Некорректное число");
+                return numObject = {};
+            }
+        }
+        numAnswer(num);
+        document.write('Сотни: ' + numObject.hundreds + '<br>' + 'Десятки: ' + numObject.dozens + '<br>' + 'Единицы: ' +numObject.units);
+    </script>
+</body>
+</html>
