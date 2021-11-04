@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 3</title>
+</head>
+<body>
+    <script>
+//
+//        Задача 1 (решето Эратосфена - простые числа)
+        document.write('<br>' + '<br>' + 'Задача 1' + '<br>' + '<br>');
+        let n = 100;
+        let arrayN  = new Array(n+1);
+        for (k=0; k < arrayN.length; k++) {
+            arrayN [k] = true;
+        }
+        arrayN[0]=false;
+        arrayN[1]=false;
+        for (i=2; i < arrayN.length; ++i) {
+            if (arrayN[i]) {
+                for (j=2; i*j < arrayN.length; ++j) {
+                    arrayN[i*j] = false;
+                }
+            }
+        }
+        document.write('Простые числа - задача 1 (от 0 до 100) <br>');
+        for (i=0; i < arrayN.length; i++) {
+
+            if (arrayN[i]) {
+                document.write(i + '<br>');
+            }
+        }
+        document.write('<br>' + '<br>' + 'Задача 1 через while' + '<br>' + '<br>');
+//      Решение через while
+//
+        function showPrimes(n) {
+            let i=2;
+            while (i < n) {
+                if (!isPrime(i)) {
+                    i++;
+                    continue;                    
+                }
+                document.write(i+ '<br>');
+                i++;
+            }
+        }
+
+        function isPrime(n) {
+            let i=2;
+            while (i < n) {
+                if ( n % i == 0) {
+                    return false;
+                }
+                i++;
+            }
+          return true;
+        }
+        document.write('Простые числа - задача 1 c while (от 0 до 100) <br>');
+        showPrimes(n);
+//
+//
+//        Задача 2-3
+        document.write('<br>' + '<br>' + 'Задача 2-3' + '<br>' + '<br>');
+
+        function countBasketPrice (prod,prodPrice) {
+            basketProduct.push(prod);
+            basketProductPrice.push(prodPrice);
+            sum = sum + basketProductPrice[m];
+            m = basketProduct.length;
+        }
+        
+        let basketProduct = [];
+        let basketProductPrice = [];
+        let product = '';
+        let productPrice = 0;
+        let m=0; // индекс
+        let sum=0;
+        while (confirm("Вводим товары с ценами?")) {
+            product = prompt ('Товар: ',);
+            productPrice = +prompt('Стоимость товара: ',);
+            countBasketPrice(product,productPrice);
+        }
+        for (let q=0; q < m; q++) {
+            document.write('Товар: ' + basketProduct[q] + ' Цена: ' + basketProductPrice[q] + '<br>');
+        }
+        document.write('<br>' + 'Сумма корзины: ' + sum);
+// 
+        document.write('<br>' + '<br>' + 'Задача 4' + '<br>' + '<br>');
+        for (let b=0;  (b<=9) ? (Boolean(!(document.write(b + '<br>')))) : false; b++) {
+//            пусто
+        }
+//
+        document.write('<br>' + '<br>' + 'Задача 5' + '<br>' + '<br>');
+        let piramid = [];
+        let aster = '';
+        for ( let t=0; t<20; t++) {
+            piramid.push('x');
+            aster += piramid[t];
+            document.write(aster + '<br>');
+            console.log(aster);            
+        }
+    </script>
+</body>
+</html>
