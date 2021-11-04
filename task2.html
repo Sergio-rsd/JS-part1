@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Task2</title>
+</head>
+<body>
+    <script>
+        "use strict";
+// Задача 3
+        let one = 0;
+        let two = 0;
+        let a = 0;
+        one = +prompt('Задача 3' + '\n' + 'Первое число: ', one);
+        two = +prompt('Второе число: ', two);
+        if (one >= 0 && two >= 0) {
+            alert ("Задача 3:" + "\n" + "числа положительные" +"\n" + "Разность: " + ((one - two < 0) ? -(one - two) : (one - two)));
+        }
+        else if (one < 0 && two < 0) {
+            alert ("Задача 3:" + "\n" + "числа отрицательные" +"\n" + "Произведение: " + one * two);            
+            }
+        else {
+            alert ("Задача 3:" + "\n" + "числа разных знаков" +"\n" + "Сумма: " + +(one + two));       
+            };
+// Задача 4
+        a = Math.round(Math.random()*15);
+        alert('Задача 4' + '\n' + 'Подобрано число: ' + a + '\n' + 'Вывод в консоли');
+        switch (a) {
+            case 0:
+                console.log(a++);
+            case 1:
+                console.log(a++);
+            case 2:
+                console.log(a++);
+            case 3:
+                console.log(a++);
+            case 4:
+                console.log(a++);
+            case 5:
+                console.log(a++);
+            case 6:
+                console.log(a++);
+            case 7:
+                console.log(a++);
+            case 8:
+                console.log(a++);                
+            case 9:
+                console.log(a++);
+            case 10:
+                console.log(a++);
+            case 11:
+                console.log(a++);
+            case 12:
+                console.log(a++);
+            case 13:
+                console.log(a++);
+            case 14:
+                console.log(a++);
+            case 15:
+                console.log(a++);
+        }
+// Задача 5
+        function plus(x,y) {
+            return x+y;
+        }
+        function substract(x,y) {
+            return x-y;
+        }
+        function divide(x,y) {
+            return x/y;
+        }
+        function multiply(x,y) {
+            return x*y;
+        }
+// Задача 6
+        function mathOperation(arg1, arg2, operation) {
+            switch (operation) {
+                case '+':
+                    return plus(arg1,arg2);
+                case '-':
+                    return substract(arg1,arg2);
+                case '/':
+                    return divide(arg1,arg2);
+                case '*':
+                    return multiply(arg1,arg2);
+            }
+        }
+        let arg1=10;
+        let arg2=2;
+        let operation = '-';
+        alert ('Задача 6' + '\n' + 'arg1: ' + arg1 +'\n'+ 'arg2: '+ arg2 + '\n' + 'operation: ' + operation + '\n' + 'РЕЗУЛЬТАТ: ' + mathOperation(arg1,arg2,operation));
+// Задача 8
+        function power(val,pow) {
+              if (pow == 1) {
+                  return val;
+              } else {
+                  return val * power(val, pow - 1);
+              }
+        }
+        let val=2;
+        let pow=6
+        alert('Задача 8' + '\n' + 'Возведение в степень' + '\n' + val + ' в степень ' + pow + ' равно ' + power(val,pow));
+        
+    </script>
+</body>
+</html>
